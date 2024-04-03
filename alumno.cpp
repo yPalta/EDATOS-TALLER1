@@ -1,11 +1,23 @@
 #include<iostream>
-#include "alumno.h"
+using namespace std;
+
+class Alumnno{
+    private:
+        int edad;
+        string nombre;
+    public:
+        Alumnno(int edad, String nombre);
+        string getNombre();
+        int getEdad();
+        void setNombre(string_nombre);
+        void setEdad(int_edad);
+};
 
 Alumno::Alumno(int edad, string nombre){
-        this -> nombre = _nombre;
-        this -> edad = _edad;
+        this-> nombre = nombre;
+        this-> edad = edad;
 }
 
 string Alumno::getNombre(){
-        return nombre;
+        return this-> nombre;
 }
