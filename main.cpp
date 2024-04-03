@@ -1,18 +1,12 @@
 #include <iostream>
+#include "Persona.h"
 using namespace std;
 
-
-
-
 int main(){
-    
-    cout<<"Hola perkin"<<endl;
-    cout<<"Hola perkin"<<endl;
-    cout<<"Hola perkin"<<endl;
-    cout<<"Hola perkin"<<endl;
-    cout<<"Hola perkin"<<endl;
-    cout<<"Hola perkin"<<endl;
-    cout<<"Hola perkin"<<endl;
+    Persona p1(29,"Jose");
+    Persona* p1ptr = &p1;
+    Persona* p2 = new Persona(20,"Pepe");
 
     return 0;
+
 }
