@@ -94,7 +94,8 @@ int main() {
     archivo<< usuario<<endl;
     archivo<< contrasena<<endl;
 
-    
+    archivo.close();
+    cout<<"funciona la wea"<<endl;
 
 
     if (usuario && contrasena == true){
