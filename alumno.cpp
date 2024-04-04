@@ -13,7 +13,7 @@ class Alumnno{
         void setEdad(int_edad);
 };
 
-Alumno::Alumno(int edad, string nombre){
+void Alumno::Alumno(int edad, string nombre){
         this-> nombre = nombre;
         this-> edad = edad;
 }
