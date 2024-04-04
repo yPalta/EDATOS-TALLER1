@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <fstream>
 using namespace std;
 
 class Login{
@@ -56,6 +56,9 @@ string Evento::getTema(){
 class Asistentes {
     private:
     string tipoAsistente;
+    int edad;
+    string ocupacion;
+
 
     public:
     Asistentes(string tipoAsistente);
@@ -63,11 +66,6 @@ class Asistentes {
     void setTipoAsistente();
 
 };
-
-Asistentes::Asistentes(string tipoAsistente){
-    this-> tipoAsistente = tipoAsistente;
-
-}
 
 string Asistentes::getTipoAsistente(){
     return this-> tipoAsistente;
@@ -78,15 +76,67 @@ string Asistentes::getTipoAsistente(){
 
 int main() {
     
-    
+    string nombreArchivo = "DatosUsuarios.txt";
+    ofstream archivo;
     string usuario;
     string contrasena;
 
+    //abrir el archivo
+    archivo.open(nombreArchivo.c_str(), fstream::out);
     cout<<"---Bienvenido---"<<endl;
     cout<<"--Porfavor ingrese su usuario: "<<endl;
     cin>> usuario;
     cout<<"--Ingrese su contrasena: "<<endl;
     cin>> contrasena;
+
+    //sobreescribir el archivo
+
+    archivo<< usuario<<endl;
+    archivo<< contrasena<<endl;
+
+    
+
+
+    if (usuario && contrasena == true){
+        int opcion;
+
+        cout<<"----Seleccione una opcion de Informe-----"<<endl;
+        cout<<"1. Lista de eventos programados"<<endl;
+        cout<<"2. Lista de asistentes"<<endl;
+        cout<<"3. Estadistica sobre los eventos"<<endl;
+        cout<<"4. Detalles sobre los asistentes"<<endl;
+        cout<<"5. Informacion sobre eventos especificos"<<endl;
+        cin>> opcion;
+
+        switch (opcion)
+        {
+        case 1:
+            /* code */
+            break;
+        case 2:
+
+            break;
+
+        case 3:
+
+            break;
+
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        
+        default:
+            cout<<"Ingrese una opcion valida del 1 al 5"<<endl;
+            break;
+        }
+    }else{
+        cout<<"Usuario o Contrasena incorrectas"<<endl;
+
+    }
+    
 
 
     
